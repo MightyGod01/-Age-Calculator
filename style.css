@@ -1,0 +1,137 @@
+/* *,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+.body {
+    background: linear-gradient(135deg, #5efc5e, #6fcef6);
+    box-shadow: 0 0 50px yellowgreen;
+
+}
+
+.container {
+    background: linear-gradient(135deg, #5efc5e, #6fcef6);
+    min-width: 450px;
+    width: 40%;
+    border: 1px solid blak;
+    position: absolute;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 50px 30px;
+    box-shadow: 0 0 50px yellowgreen;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(280deg);
+
+    }
+}
+
+.container * {
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+}
+
+.inputs-wrappers {
+    background-color: #080808;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0, 3);
+    margin-bottom: 50px;
+
+}
+
+input,
+button {
+    height: 50px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+input {
+    width: 60%;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.calculate {
+    width: 30%;
+    float: right;
+
+}
+
+.calculate:hover {
+    background: red;
+    color: white;
+    font-size: 18px;
+    animation: animate 3s linear infinite;
+
+}
+
+.outputs-wrapper {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30%;
+}
+
+.outputs-wrapper div {
+    height: 100px;
+    width: 100px;
+    background-color: #080808;
+    border-radius: 5px;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+    box-shadow: rgba(30, 57, 77)0px 20px 30px -10px;
+    transition: ease-in-out .2s;
+
+}
+
+span {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    color: #707070;
+    font-weight: 500;
+
+}
+
+@media screen and (max-width:475px) {
+    .body {
+        width: 100%;
+        /* background: goldenrod; */
+    }
+
+    .container {
+        position: fixed;
+        border: none;
+        place-items: center;
+        width: 100%;
+        height: 60%;
+
+    }
+
+}
